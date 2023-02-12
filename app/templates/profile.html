@@ -1,5 +1,50 @@
 {% extends "base.html" %}
 
+{% block css %}<link rel="stylesheet" href="{{url_for('static', filename='css/app.css')}}"/> {% endblock%}
+
 {% block main %}
-<h1>Profile Page</h1>
+<div class = "card">
+
+    <div class = "header-top-info"> 
+        <div id="image"> <img id="profilepic" src="{{url_for('static', filename='Github Logo.jpg')}}"/></div>
+        <h1>Kerene Wright</h1>
+        <h6>Kerene789@gmail.com</h6>
+        <h6>Kingston, Jamaica</h6>
+        <h6>{{date_string}}</h6>
+    </div>
+
+    <div class = "header-bottom-info"> 
+        <h8>I am aspiring to become a fullstack developer and a proficient programmer. It's gonna be a hard road, but I enjoy long drives.</h8>
+
+        <div class="container-profile">
+            <div id = "container-info"> 
+                <div id="post-info"> 
+                    <h4>7</h4> 
+                    <span>Posts</span>
+                </div> 
+            </div>
+        
+            <div id = "container-info"> 
+                <div id="follow-info"> 
+                    <h4>100</h4> 
+                    <span>Following</span>
+                </div> 
+            </div>
+        
+            <div id = "container-info"> 
+                <div id="follower-info"> 
+                    <h4>250</h4> 
+                    <span>Followers</span>
+                </div> 
+            </div>
+        </div>
+                
+    </div>
+
+    <div id = "button">  
+        <button type="button" id="btn">Follow</button>
+    </div>
+
+</div>
+
 {% endblock %}
